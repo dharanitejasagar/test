@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @pic.name %>
+</p>
+
+<p>
+  <strong>Size:</strong>
+  <%= @pic.size %>
+</p>
+<%= render 'comments/comment' %>
+<%= render 'comments/form' %>
+
+<%= link_to 'Edit', edit_pic_path(@pic) %> |
+<%= link_to 'Back', pics_path %>

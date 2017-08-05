@@ -1,0 +1,15 @@
+<p class="para"><%= link_to 'book', new_book_path %> | 
+<%= link_to 'pic', new_pic_path %></p><br>
+
+<h1>Blogs</h1>
+
+<% @books.each do |f| %>
+
+	<h1><%= link_to  f.name, book_path(f) %></h1>
+	<p><%= f.description %></p>
+
+	<%= link_to 'edit', edit_book_path(f) %> |
+	<%= link_to 'delete', f, :method=> :delete %>
+	<hr>
+<% end %>
+<%= link_to 'new', new_book_path %>
